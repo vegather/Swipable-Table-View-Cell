@@ -5,12 +5,12 @@
 
 ## Instructions
 
-A subclass of UITableViewCell that makes it possible to swipe left or right on an item to check it off, or remove it. Kind of like how Apple's Mail app works. You can set up your cells like you normally would in your Storyboard, just remember to set SwipableTableViewCell as your class, like this:
+`SwipableTableViewCell` is a subclass of `UITableViewCell` that makes it possible to swipe left or right on an item to check it off, or remove it. Kind of like how Apple's Mail app works. You can set up your cells like you normally would in your Storyboard, just remember to set `SwipableTableViewCell` as your class, like this:
 
 ![Screenshot](http://imgur.com/Wj76KcD.png)
 
 
-When you want to receive the swipe actions, just set yourself (your UIViewController typically) as the delegate of the cell. The easiest place to do this is probably in `tableView:cellForRowAtIndexPath:`. You will then receive callbacks on a protocol that looks like this:
+When you want to receive the swipe actions, just set yourself (your `UIViewController` typically) as the delegate of the cell. The easiest place to do this is probably in `tableView:cellForRowAtIndexPath:`. You will then receive callbacks on a protocol that looks like this:
 
 ```
 protocol SwipableTableViewCellDelegate {
